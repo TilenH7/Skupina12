@@ -1,4 +1,4 @@
-// script.js
+/* script.js
 const toggleButton = document.getElementById('darkModeToggle');
 
 toggleButton.addEventListener('click', () => {
@@ -16,3 +16,5 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('dark-mode');
   }
 });
+*/
+// Zakomentiran zato ker je drgje skript k dela
