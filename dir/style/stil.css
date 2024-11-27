@@ -13,6 +13,18 @@ body {
     margin: 4px 2px;
     cursor: pointer;
   }
-  
-  .button1 {background-color: #04AA6D;} /* Green */
-  .button2 {background-color: #008CBA;} /* Blue */
+.stevec {
+  text-align: center;
+  border:#04AA6D
+}
+  .button1 {
+    background-color: #04AA6D;
+    float: right;
+  }
+
+  .button2 {
+    background-color: #008CBA;
+  }
+  .button3 {
+    background-color: bisque;
+  }

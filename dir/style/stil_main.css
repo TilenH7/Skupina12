@@ -3,11 +3,23 @@ body {
   }
 header h1 {
     background-color: #40925d;
+    font-style: italic;  
+    text-align: center;  
+}
+main p {
+    text-align: center;
     font-style: italic;    
 }
 
+.box{
+    width: 600px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 0 auto;
+    
+}
+
 .button {
-    background-color: #04AA6D; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -16,3 +28,21 @@ header h1 {
     display: inline-block;
     font-size: 16px;
   }
+  .button1 {
+    cursor: pointer;
+    background-color: #04AA6D;
+    float: right;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+  }
+
+  .button2 {
+    background-color: #008CBA;
+  }
+  .button1 {border-radius: 50px;}
