@@ -1,7 +1,11 @@
 body {
     background-color: #E5E3D4;
   }
-  .button {
+header {
+    font-style: italic;
+}
+
+.button {
     background-color: #04AA6D; /* Green */
     border: none;
     color: white;
