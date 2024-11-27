@@ -8,10 +8,6 @@
     Za gumbe uporabli addEventListener('click', [ime gumba v htmlju])
 */
 
-//button.addEventListener('click', function(event) {
-//    console.log('Button clicked!');
-//}, { passive: true });
-
 
 document.addEventListener("DOMContentLoaded", () => {
     //testiru bom mau a je fajn on load uporablat al kaj bi blo najbolš pr web developmentu
@@ -26,6 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
     crni.addEventListener('click', function(event){
         var element = document.body;
         element.classList.toggle("dark-mode");
+    });
+
+    const cookie = document.getElementById('piskotLINK');
+    const puska = document.getElementById('puskaLINK');
+    const slike = document.getElementById('slikeLINK');
+    const bombomet = document.getElementById('bombometLINNK');
+
+    cookie.addEventListener('click', function(event){
+        window.location.href = "../public/CookieClicker.html"
+    });
+    puska.addEventListener('click', function(event){
+        window.location.href = "../public/puska.html"
+    });
+    slike.addEventListener('click', function(event){
+        window.location.href = "../public/slike.html"
+    });
+    bombomet.addEventListener('click', function(event){
+        window.location.href = "../public/bombomet.html"
     });
 });
 
