@@ -13,7 +13,7 @@
 //}, { passive: true });
 
 
-window.onload = (event) => {
+document.addEventListener("DOMContentLoaded", () => {
     //testiru bom mau a je fajn on load uporablat al kaj bi blo najbolš pr web developmentu
     console.log("page is fully loaded");
     
@@ -23,5 +23,9 @@ window.onload = (event) => {
     vrni.addEventListener('click', function(event){
         window.location.href = "../public/index.html"
     });
-};
+    crni.addEventListener('click', function(event){
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    });
+});
 
