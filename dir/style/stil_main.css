@@ -1,7 +1,12 @@
 body {
     background-color: #E5E3D4;
   }
-  .button {
+header h1 {
+    font-style: italic;
+    background-color: #40925d;
+}
+
+.button {
     background-color: #04AA6D; /* Green */
     border: none;
     color: white;
