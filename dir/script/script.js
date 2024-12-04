@@ -39,6 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navigateTo('piskotLINK', '../public/CookieClicker.html');
     navigateTo('puskaLINK', '../public/puska.html');
     navigateTo('slikeLINK', '../public/slike.html');
-    navigateTo('bombometLINNK', '../public/bombomet.html');
+    navigateTo('bombometLINK', '../public/bombomet.html');
 });
 
