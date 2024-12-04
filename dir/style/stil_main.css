@@ -84,40 +84,52 @@ main p {
 
 /* Dark Mode Support */
 body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
 }
 
 header.dark-mode {
-  background-color: #1e4d2b;
+  background-color: #1e4d2b; /* Darker header */
+}
+
+header.dark-mode h1 {
+  color: #fff; /* White header text */
 }
 
 .box.dark-mode {
-  background-color: #1c1c1c;
-  color: #ffffff;
-  border-color: #1e7d4c;
+  background-color: #1c1c1c; /* Dark background for box */
+  color: #ffffff; /* White text */
+  border-color: #1e7d4c; /* Darker border */
 }
 
 .button1.dark-mode {
-  background-color: #1e7d4c;
+  background-color: #1e7d4c; /* Dark button background */
+}
+
+.button1.dark-mode:hover {
+  background-color: #15663b; /* Hover effect for dark mode */
 }
 
 .button2.dark-mode {
-  background-color: #006080;
+  background-color: #006080; /* Dark button background */
+}
+
+.button2.dark-mode:hover {
+  background-color: #004b66; /* Hover effect for dark mode */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   header h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .box {
-      padding: 20px;
+    padding: 20px;
   }
 
   .button {
-      font-size: 14px;
-      padding: 12px 24px;
+    font-size: 14px;
+    padding: 12px 24px;
   }
 }

@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Set initial state from localStorage
         if (localStorage.getItem("dark-mode") === "enabled") {
             document.body.classList.add("dark-mode");
-            darkModeToggle.textContent = "Dark Mode"; // Update button text
+            darkModeToggle.textContent = "Light Mode"; // Update button text to Light Mode when dark mode is active
         } else {
-            darkModeToggle.textContent = "Light Mode"; // Default to light mode
+            darkModeToggle.textContent = "Dark Mode"; // Default to Dark Mode button text
         }
 
         // Add event listener for toggling dark mode
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update localStorage and button text based on the current state
             if (document.body.classList.contains("dark-mode")) {
                 localStorage.setItem("dark-mode", "enabled");
-                darkModeToggle.textContent = "Dark Mode";
+                darkModeToggle.textContent = "Light Mode"; // When dark mode is enabled, set the text to Light Mode
             } else {
                 localStorage.setItem("dark-mode", "disabled");
-                darkModeToggle.textContent = "Light Mode";
+                darkModeToggle.textContent = "Dark Mode"; // When dark mode is disabled, set the text to Dark Mode
             }
         });
     }
