@@ -1,0 +1,26 @@
+body {
+    background-color: #E5E3D4;
+  }
+  header h1 {
+    background-color: #40925d;
+    font-style: italic;  
+    text-align: center;  
+}
+.button1 {
+    cursor: pointer;
+    background-color: #04AA6D;
+    float: right;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+  }
+  .slike-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
