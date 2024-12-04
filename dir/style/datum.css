@@ -1,0 +1,13 @@
+/* Date Styling */
+#datum {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7); /* Slight background to make it readable */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Ensure it's always on top */
+}

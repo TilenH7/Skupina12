@@ -73,6 +73,7 @@ main {
     flex: 1 1 400px;
     padding: 10px;
     text-align: left;
+    color: #000000;
 }
 
 .podatki-text #naslov {
@@ -88,6 +89,7 @@ main {
     flex-direction: column;
     gap: 20px;
     margin: 20px 0;
+    color: #000000;
 }
 
 .opis-text div {
@@ -96,6 +98,7 @@ main {
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000000;
 }
 
 .opis-text #naslov {
