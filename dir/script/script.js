@@ -8,12 +8,31 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "../public/index.html"
         });
     };
-    if (crni) {
-        crni.addEventListener('click', function(event){
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        });
+    
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        crni.textContent = "Svetli način"; // Update button text
+    } else {
+        crni.textContent = "Temni način"; // Default to light mode
     }
+
+    // Add event listener for toggling dark mode
+    crni.addEventListener('click', () => {
+        document.body.classList.toggle("dark-mode");
+
+
+
+
+        // Update localStorage and button text based on the current state
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+            crni.textContent = "Svetli način";
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+            crni.textContent = "Temni način";
+        }
+
+    });
 
 
     const navigateTo = (id, target) => {
