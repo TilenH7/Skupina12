@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulacija streljanja</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #40925d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #game-area {
+      position: relative;
+      width: 80%;
+      height: 80%;
+      border: 2px solid #fff;
+      background-color: #444;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+
+    .start-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .start-btn:hover {
+      background-color: darkgreen;
+    }
+
+    .ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .results {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+<div id="game-area">
+  <div id="score">Zadetki: 0</div>
+  <button class="start-btn" onclick="startGame()">Začni igro</button>
+  <div class="game-container" id="gameContainer" style="width: 100%; height: 100%; position: relative;"></div>
+  <div class="results" id="results"></div>
+</div>
+<script>
+  const gameContainer = document.getElementById('gameContainer');
+  const results = document.getElementById('results');
+  const scoreBoard = document.getElementById('score');
+  let startTime, score, totalClicks, gameInterval;
+
+  function startGame() {
+    results.textContent = '';
+    score = 0;
+    totalClicks = 0;
+    scoreBoard.textContent = 'Zadetki: 0';
+    spawnBall();
+    startTime = Date.now();
+    gameInterval = setTimeout(endGame, 10000);
+  }
+
+  function spawnBall() {
+    const ball = document.createElement('div');
+    ball.classList.add('ball');
+
+    // Naključno pozicioniranje
+    const x = Math.random() * (gameContainer.offsetWidth - 50);
+    const y = Math.random() * (gameContainer.offsetHeight - 50);
+    ball.style.left = `${x}px`;
+    ball.style.top = `${y}px`;
+
+    // Dogodek ob kliku
+    ball.onclick = () => {
+      score++;
+      totalClicks++;
+      scoreBoard.textContent = `Zadetki: ${score}`;
+      ball.remove();
+      spawnBall();
+    };
+
+    gameContainer.appendChild(ball);
+
+
+    setTimeout(() => {
+      if (ball.parentElement) {
+        ball.remove();
+        totalClicks++;
+        spawnBall();
+      }
+    }, 1000);
+  }
+
+  function endGame() {
+    clearTimeout(gameInterval);
+    gameContainer.innerHTML = '';
+
+    // Ocena rezultatov
+    const accuracy = Math.round((score / totalClicks) * 100) || 0;
+    let comment = '';
+    if (accuracy > 80) {
+      comment = 'Odličen refleks, pravi MVP!';
+    } else if (accuracy > 50) {
+      comment = 'Dobra igra, vendar lahko še izboljšaš!';
+    } else {
+      comment = 'Treba bo še malo vaditi!';
+    }
+
+    results.innerHTML = `
+        <p>Rezultat: ${score} klikov</p>
+        <p>Natančnost: ${accuracy}%</p>
+        <p>${comment}</p>
+      `;
+  }
+</script>
+</body>
+</html>

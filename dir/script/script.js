@@ -48,6 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
     navigateTo('puskaLINK', '../public/puska.html');
     navigateTo('slikeLINK', '../public/slike.html');
     navigateTo('bombometLINK', '../public/bombomet.html');
+    navigateTo('kalkulatorLINK', '../public/kalkulator.html');
+    navigateTo('simulacijaLINK', '../public/sim.html');
+
+
+
 });
 
 
@@ -83,6 +88,8 @@ const translations = {
       "delovanjeBesediloAB" : "Avtomatski bombomet GMG je avtomatsko orožje z masivnim inercijskim zaklepom. Strelja iz odprtega zaklepa.  Polni se z leve ali desne strani s strelivom, povezanim v razpadni nabojnik po 32 nabojev. Z orožjem upravljata dva člana posadke. Strelja lahko posamično ali rafalno.",
       "piskotJS" : "Piškot",
       "domaca-stran" : "Domača stran",
+      "kalkulator" : "Kalkulator",
+      "simulacija" : "Simulacija",
     },
     en: {
       "title-index": "Weapons of the Slovenian Army",
@@ -115,6 +122,8 @@ const translations = {
       "delovanjeBesediloAB" : "The GMG automatic grenade launcher is an automatic weapon with a massive inertial bolt-lock. It fires from an open bolt. It can be loaded from the left or right side with ammunition linked in a disintegrating belt containing 32 rounds. The weapon is operated by a two-member crew. It can fire both single shots and bursts.",
       "piskotJS" : "Cookie",
       "domaca-stran" : "Home page",
+        "kalkulator" : "Calculator",
+        "simulacija" : "Simulation",
     },
   };
   
