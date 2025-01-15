@@ -7,41 +7,43 @@ body {
     color: #333;
 }
 
-/* Header Styling */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: #40925d;
-    padding: 20px 0;
-    text-align: center;
     color: white;
-    position: relative;
-}
+  }
+  
+  .lang-buttons-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button1 {
+    background-color: #04AA6D;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button1:hover {
+    background-color: #036843;
+    transform: scale(1.05);
+  }
+  
 
-header h1 {
+  header h1 {
     font-style: italic;
     margin: 0;
     font-size: 2.5rem;
-    padding: 0 20px;
-}
-
-.button1 {
-    cursor: pointer;
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 13px;
-    border-radius: 8px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button1:hover {
-    background-color: #036843;
-    transform: scale(1.05);
-}
-
+    padding-left: 120px;  /* Add left padding to move the title */
+  }
+  
 /* Main Content Styling */
 main {
     padding: 20px;

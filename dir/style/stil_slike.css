@@ -10,9 +10,9 @@ body {
 /* Header Styling */
 header {
   background-color: #40925d;
-  padding: 20px 0;
+  padding: 20px 20px;
   text-align: center;
-  color: white;
+  color: white;  
 }
 
 header h1 {
@@ -148,4 +148,9 @@ header.dark-mode {
   .slike-container div {
       padding: 15px;
   }
+}
+
+.lang{
+  background-color: #04AA6D;
+
 }
