@@ -90,6 +90,12 @@ const translations = {
       "domaca-stran" : "Domača stran",
       "kalkulator" : "Kalkulator",
       "simulacija" : "Simulacija",
+        "title-index1": "Kalkulator za logistične izračune Slovenske vojske",
+        "slovenska-vojska1": "Slovenska vojska uporablja ta kalkulator za hitro in učinkovito izračunavanje logističnih potreb, povezanih z operativnimi nalogami. S pomočjo tega orodja lahko izračunate porabo streliva, transportne kapacitete ali časovne zahteve za izvedbo operacij.",
+        "poglej-slike1": "Tukaj je nekaj primerov, kako lahko kalkulator uporabite:",
+        "example1": "Izračun števila nabojev, potrebnih za en dan operacije.",
+        "example2": "Preračunavanje mase opreme za transport.",
+        "example3": "Ocena časa, potrebnega za izvedbo manevra na terenu."
     },
     en: {
       "title-index": "Weapons of the Slovenian Army",
@@ -124,6 +130,12 @@ const translations = {
       "domaca-stran" : "Home page",
         "kalkulator" : "Calculator",
         "simulacija" : "Simulation",
+        "title-index1": "Logistics Calculator for the Slovenian Armed Forces",
+        "slovenska-vojska1": "The Slovenian Armed Forces use this calculator for quick and efficient calculations of logistics needs related to operational tasks. With this tool, you can calculate ammunition consumption, transport capacities, or time requirements for operations.",
+        "poglej-slike1": "Here are some examples of how you can use the calculator:",
+        "example1": "Calculate the number of rounds needed for one day of operation.",
+        "example2": "Recalculate the weight of equipment for transport.",
+        "example3": "Estimate the time required to perform a maneuver in the field."
     },
   };
   

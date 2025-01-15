@@ -3,16 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalkulator</title>
+  <title>Kalkulator - Logistika Slovenske vojske</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
       background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .content {
+      width: 60%;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .content h1 {
+      margin-top: 0;
+    }
+    .content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
     }
     .calculator {
-      display: inline-block;
+      width: 35%;
       background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
@@ -43,58 +63,78 @@
       cursor: pointer;
     }
     button:hover {
-      background-color: #089c4b;
+      background-color: #067a3a;
     }
     button.clear {
-      background-color: #99acc2;
+      background-color: #a71d2a;
     }
     button.clear:hover {
-      background-color: #a71d2a;
+      background-color: #870d1b;
     }
   </style>
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" class="display" id="display" disabled />
-    <div class="buttons">
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('/')">/</button>
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('*')">×</button>
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button onclick="appendValue('-')">-</button>
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="appendValue('+')">+</button>
-      <button class="clear" onclick="clearDisplay()">C</button>
-    </div>
+<!-- Vsebina o orožju -->
+<div class="content">
+  <h1 data-translate="title-index1">Kalkulator za logistične izračune Slovenske vojske</h1>
+  <p data-translate="slovenska-vojska1">
+    Slovenska vojska uporablja ta kalkulator za hitro in učinkovito izračunavanje logističnih potreb, povezanih z operativnimi nalogami.
+    S pomočjo tega orodja lahko izračunate porabo streliva, transportne kapacitete ali časovne zahteve za izvedbo operacij.
+  </p>
+  <p>
+    <span data-translate="poglej-slike1">Tukaj je nekaj primerov, kako lahko kalkulator uporabite:</span>
+  </p>
+  <ul>
+    <li data-translate="example1">Izračun števila nabojev, potrebnih za en dan operacije.</li>
+    <li data-translate="example2">Preračunavanje mase opreme za transport.</li>
+    <li data-translate="example3">Ocena časa, potrebnega za izvedbo manevra na terenu.</li>
+  </ul>
+  <img src="../style/style_image/brigada.jpg" alt="Logistika Slovenske vojske">
+</div>
+<script src="../script/script.js"></script>
+
+<!-- Kalkulator -->
+<div class="calculator">
+  <input type="text" class="display" id="display" disabled />
+  <div class="buttons">
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('/')">/</button>
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('*')">×</button>
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('-')">-</button>
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendValue('+')">+</button>
+    <button class="clear" onclick="clearDisplay()">C</button>
   </div>
+</div>
 
-  <script>
-    const display = document.getElementById('display');
+<script>
+  const display = document.getElementById('display');
 
-    function appendValue(value) {
-      display.value += value;
+  function appendValue(value) {
+    display.value += value;
+  }
+
+  function calculate() {
+    try {
+      display.value = eval(display.value); // Izvede izračun
+    } catch (error) {
+      display.value = 'Napaka';
     }
+  }
 
-    function calculate() {
-      try {
-        display.value = eval(display.value); // Izvede izračun
-      } catch (error) {
-        display.value = 'Napaka';
-      }
-    }
-
-    function clearDisplay() {
-      display.value = '';
-    }
-  </script>
+  function clearDisplay() {
+    display.value = '';
+  }
+</script>
 </body>
 </html>
